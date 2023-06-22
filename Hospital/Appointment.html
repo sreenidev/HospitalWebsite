@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Page</title>
+    <link rel="stylesheet" href="Nav.css">
+    <style>
+        .first_block{
+            background-image: url(/img/appointment_bg.png);
+            background-position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        input, select, textarea{
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        textarea::placeholder{
+            padding-top: 40px;
+        }
+
+        .nurse_img{
+            /* border: 2px solid red; */
+            position: relative;
+            top: -90px;
+            width: 30%;
+            height: 100%;
+            left: 70%;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+            <!-- Navigation bar starts -->
+    <nav class="navmainblock">
+        <div class="logo"><img src="https://www.pngmart.com/files/16/Google-Logo-PNG-File.png" alt=""></div>
+        <div class="search_bar">
+            <input id="search_input" type="search" placeholder="GOOGLE HEALTHCARE" >
+            <div class="searchbar_img">
+                <img src="/img/doctor_logo.png" alt="" style="height: 30px; width: 30px; padding-top: 5px; margin-left: -20px;">
+            </div>
+            <button id="search_button">GO</button>
+
+        </div>
+        <div class="menu">
+            <ol>
+                <li><a href="Home.html">HOME</a></li>
+                <li><a href="Doctors.html">DOCTORS</a></li>
+                <li><a href="Service.html">SERVICE</a></li>
+                <li><a href="Appointment.html">APPOINTMENT</a></li>
+            </ol>
+        </div>
+    </nav>
+            <!-- Navigation bar ends -->
+
+    <div class="first_block">
+        <h1 style="color: green; justify-content: center; display: flex; padding: 50px;">GOOOOOGLE DOCTORS</h1>
+        <form action="" style="display: flex; justify-content: center;">
+            <fieldset style="position: absolute;">
+                <legend style="margin-left:40%; margin-bottom: 15px;">Make an Appointment</legend>
+                <!-- <label for="name">Patient Name:</label> -->
+                <input type="text" placeholder="  Patient Name" style="background: transparent; width: 250px; height: 50px; border-radius: 6px; border-style:groove; border-color: orange; font-weight:bold;">
+                
+                <!-- <label for="age">Age:</label> -->
+                <input type="number" placeholder="  Patient age" style="background: transparent; width: 250px; height: 50px; border-radius: 6px; border-style:groove; border-color: orange; font-weight:bold;"><br><br>
+                
+                <select name="gender" id=""style="background: transparent; width: 250px; height: 55px; border-radius: 6px; border-style:groove; border-color: orange; border:2px solid orange;">
+                    <option value="">Select</option>
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Not willing to Disclose</option>
+                </select>
+                
+                <input type="text" placeholder="  dt / of / brth" onfocus="(this.type='date')" style="background: transparent; width: 250px; height: 50px; border-radius: 6px; border-style:groove; border-color: orange; font-weight:bold;"><br><br>
+                
+                <!-- <label for="email">Email:</label> -->
+                <input type="email" placeholder="  myname@example.com" style="background: transparent; width: 250px; height: 50px; border-radius: 6px; border-style:groove; border-color: orange; font-weight:bold;">
+
+                <!-- <label for="contact">Phone Number:</label> -->
+                <input type="tel" placeholder="  +91 98765-43210" style="background: transparent; width: 250px; height: 50px; border-radius: 6px; border-style:groove; border-color: orange; font-weight:bold;"><br><br>
+
+                <textarea type="text" placeholder="Reason of Appointment" style="width: 550px; height: 100px; text-align: center; background: transparent; border-radius: 6px; border-style:groove; border-color: orange; font-weight:bolder; resize: vertical; border-width: 2px; margin-bottom: 15px;"></textarea><br><br>
+                <button class="submit_btn" style="background: transparent; height: 40px; width: 100px; border-radius: 30px; margin-left: 40%; border-color: green;">SUBMIT</button>
+            </fieldset>
+        </form>
+        <img class="nurse_img" src="/img/appointment_nurse.png" alt="">
+    </div>
+
+
+    <script>
+        let btn = document.querySelector(".submit_btn")
+            btn.addEventListener("click", () => {
+            document.body.innerHTML="<h1>YOUR APPOINTMENT HAS BEEN SUCCESSFULLY BOOKED</h1>"
+        })
+    </script>
+</body>
+</html>
